@@ -11,7 +11,9 @@ export default {
         'Oswald':['Oswald'],
       },
       colors:{
-        'Azure':'#0866FF'
+        'Azure':'#0866FF',
+        'WhiteSmoke':'#f5f5f5',
+        'Gray':'#F2F4F7',
       }
     },
   },
