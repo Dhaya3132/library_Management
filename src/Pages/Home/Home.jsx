@@ -1,4 +1,6 @@
 import Categories from "../../Components/Categories";
+import Footer from "../../Components/Footer";
+import Popularbook from "../../Components/Popularbook";
 import hero_image from '../../assets/hero_image.jpg';
 const Home = () => {
     return (
@@ -11,6 +13,8 @@ const Home = () => {
                 <img src={hero_image} alt="hero_image" className='w-96 h-auto' />
             </section>
             <Categories />
+            <Popularbook />
+            <Footer />
         </div>
     )
 }
