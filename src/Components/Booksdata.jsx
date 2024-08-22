@@ -1,7 +1,16 @@
 import React from 'react';
 import { bookData } from '../utils/mockData';
 import { Link } from 'react-router-dom';
-const Booksdata = ({ title, searchText }) => {
+
+const Booksdata = ({ title, inputValue }) => {
+    
+    const searchedValue = inputValue ? inputValue.toLowerCase() : '';
+
+    const filterData = bookData.filter((book) => (
+        (book.title && book.title.toLowerCase().includes(searchedValue)) || 
+        (book.author && book.author.toLowerCase().includes(searchedValue))
+    ));
+    
     return (
         <div className='p-10'>
             <div className='flex justify-between'>
@@ -9,7 +18,7 @@ const Booksdata = ({ title, searchText }) => {
                 {title ? '' : <Link to='/browsebook'><p className='bg-WhiteSmoke text-Azure rounded-md px-3 py-1'>View details</p></Link>}
             </div>
             <div className="flex flex-wrap justify-center p-5 gap-5 mt-5">
-                {bookData.map((book) => (
+                {filterData.map((book) => (
                     <div className="p-2 border-2 border-blue-200 rounded-md w-64 shadow-sm hover:scale-105 cursor-pointer" key={book.id}>
                         <img src={book.img} alt="book_image" className="w-full h-40 rounded-md" />
                         <h3 className="font-semibold text-base font-Poppins mt-2">{book.title}</h3>
@@ -25,4 +34,5 @@ const Booksdata = ({ title, searchText }) => {
         </div>
     )
 }
+
 export default Booksdata;

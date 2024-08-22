@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { bookData } from '../../utils/mockData';
 import Booksdata from '../../Components/Booksdata';
+
 const BookDetail = () => {
   const { id } = useParams();
   const book_data = bookData.find(book => book.id === parseInt(id));
