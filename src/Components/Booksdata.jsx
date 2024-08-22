@@ -1,15 +1,14 @@
 import React from 'react';
 import { bookData } from '../utils/mockData';
 import { Link } from 'react-router-dom';
-
-const Popularbook = () => {
+const Booksdata = ({title}) => {
     return (
         <div className='p-10'>
             <div className='flex justify-between'>
-                <h2 className='font-semibold text-3xl'>Popular Books</h2>
-                <Link to='/browsebook'><p className='bg-WhiteSmoke text-Azure rounded-md px-3 py-1'>View details</p></Link>
+                <h2 className='font-semibold text-3xl'>{title ? title : 'Popular Books'}</h2>
+                {title ? '' : <Link to='/browsebook'><p className='bg-WhiteSmoke text-Azure rounded-md px-3 py-1'>View details</p></Link>}
             </div>
-            <div className="flex flex-wrap justify-center p-5 gap-5">
+            <div className="flex flex-wrap justify-center p-5 gap-5 mt-5">
                 {bookData.map((book) => (
                     <div className="p-2 border-2 border-blue-200 rounded-md w-64">
                         <img src={book.img} alt="book_image" className="w-full h-40 rounded-md" />
@@ -23,6 +22,5 @@ const Popularbook = () => {
                 ))}
             </div>
         </div>
-    )
-}
-export default Popularbook
+    )}
+export default Booksdata;

@@ -2,17 +2,16 @@ import { useEffect, useState } from "react";
 import Tabbutton from "./Tabbutton";
 import { bookData } from "../utils/mockData";
 const Categories = () => {
+    
     const [selectedTab, setSelectedTab] = useState();
     const [filterdBooks, setFilteredBooks] = useState([]);
-    const handleEvent = (selectedContent) => {
-        setSelectedTab(selectedContent)
-    }
+    const handleEvent = (selectedContent) => { setSelectedTab(selectedContent) }
     useEffect(() => {
-        const filterdBook = bookData.filter((book) => (book.type === selectedTab));
-        setFilteredBooks(filterdBook);
+        const filterdBook = bookData.filter((book) => (book.type === selectedTab)); setFilteredBooks(filterdBook);
     }, [selectedTab])
+
     return (
-        <div className="p-10 mt-10 bg-white">
+        <div className="mt-10 bg-white">
             <h2 className="font-semibold font-Poppins mb-3 text-xl">Catergories book</h2>
             <div className="flex gap-4 p-2 border-2 border-blue-100 shadow-sm w-fit rounded-full">
                 <Tabbutton onClick={() => handleEvent('Science')} isActive={selectedTab === 'Science'}>Science</Tabbutton>

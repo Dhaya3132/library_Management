@@ -1,10 +1,11 @@
 import Categories from "../../Components/Categories";
 import Footer from "../../Components/Footer";
-import Popularbook from "../../Components/Popularbook";
+import Booksdata from "../../Components/Booksdata";
 import hero_image from '../../assets/hero_image.jpg';
 const Home = () => {
     return (
-        <div>
+        <>
+        <div className="p-10">
             <section id="hero_Section" className="flex md:flex-row flex-col justify-center items-center gap-10 md:p-10 p-5">
                 <div className="w-1/2">
                     <h2 className="text-5xl font-semibold font-Poppins mb-2">The Ultimate Library Management Tool</h2>
@@ -13,9 +14,9 @@ const Home = () => {
                 <img src={hero_image} alt="hero_image" className='w-96 h-auto' />
             </section>
             <Categories />
-            <Popularbook />
-            <Footer />
+            <Booksdata />
         </div>
-    )
-}
+        <Footer /></>
+
+    )}
 export default Home;
