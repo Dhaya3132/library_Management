@@ -17,6 +17,5 @@ const Home = () => {
             <Booksdata />
         </div>
         <Footer /></>
-
     )}
 export default Home;

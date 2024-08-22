@@ -4,6 +4,7 @@ import Home from './Pages/Home/Home';
 import Books from "./Pages/Browsebook/Books";
 import AddBooks from "./Pages/Addbooks/AddBooks";
 import BookDetail from "./Pages/Bookdetail/BookDetail";
+import Error from "./Pages/Error/Error";
 const router = createBrowserRouter([
     {
         path:'/',
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
                 path:'/books/:id',
                 element:<BookDetail />
             }
-        ]
+        ],
+        errorElement:<Error />
     },
     
 ])
