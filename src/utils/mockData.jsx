@@ -6,6 +6,7 @@ export const bookData = [
         author:'Stephen Hawking',
         type:'Non-Fiction',
         description:'This classic book explores the mysteries of the universe, including black holes, time travel, and the Big Bang, in a way that is accessible to general readers.',
+        rating:'4.5',
     },
     {
         id:2,
@@ -14,6 +15,7 @@ export const bookData = [
         author:'Richard Dawkins',
         type:'fantacy',
         description:'Dawkins introduces the concept of the "selfish gene," explaining how genes drive evolution and behavior. The book is known for its clear explanation of complex biological ideas',
+        rating:'4.5',
     },{
         id:3,
         img:'/assets/ScienceBooks/scienceBook3.jpg',
@@ -21,6 +23,7 @@ export const bookData = [
         author:'Brian Greene',
         type:'Non-Fiction',
         description:'This book delves into the world of string theory, a cutting-edge idea in physics that attempts to unify all fundamental forces of the universe. Greene makes complex concepts understandable and fascinating.',
+        rating:'4.5',
     },{
         id:4,
         img:'/assets/ScienceBooks/scienceBook4.jpg',
@@ -28,6 +31,7 @@ export const bookData = [
         author:'Yuval Noah Harari',
         type:'Science',
         description:'Harari explores the history of humanity, from the evolution of Homo sapiens to the modern world, blending science, history',
+        rating:'2.5',
     },{
         id:5,
         img:'/assets/ScienceBooks/scienceBook5.jpg',
@@ -35,6 +39,7 @@ export const bookData = [
         author:'Siddhartha Mukherjee',
         type:'Non-Fiction',
         description:'Harari explores the history of humanity, from the evolution of Homo sapiens to the modern world, blending science, history',
+        rating:'4.2',
     },
     {
         id:6,
@@ -43,6 +48,7 @@ export const bookData = [
         author:'Stephen Hawking',
         type:'fiction',
         description:'This classic book explores the mysteries of the universe, including black holes, time travel, and the Big Bang, in a way that is accessible to general readers.',
+        rating:'4.2',
     },
     {
         id:7,
@@ -51,6 +57,7 @@ export const bookData = [
         author:'Richard Dawkins',
         type:'crime',
         description:'Dawkins introduces the concept of the "selfish gene," explaining how genes drive evolution and behavior. The book is known for its clear explanation of complex biological ideas',
+        rating:'4.1',
     },{
         id:8,
         img:'/assets/ScienceBooks/scienceBook3.jpg',
@@ -58,6 +65,7 @@ export const bookData = [
         author:'Brian Greene',
         type:'crime',
         description:'This book delves into the world of string theory, a cutting-edge idea in physics that attempts to unify all fundamental forces of the universe. Greene makes complex concepts understandable and fascinating.',
+        rating:'4.0',
     },{
         id:9,
         img:'/assets/ScienceBooks/scienceBook4.jpg',
@@ -65,6 +73,7 @@ export const bookData = [
         author:'Yuval Noah Harari',
         type:'fantacy',
         description:'Harari explores the history of humanity, from the evolution of Homo sapiens to the modern world, blending science, history',
+        rating:'4.8',
     },{
         id:10,
         img:'/assets/ScienceBooks/scienceBook5.jpg',
@@ -72,5 +81,6 @@ export const bookData = [
         author:'Siddhartha Mukherjee',
         type:'fantacy',
         description:'Harari explores the history of humanity, from the evolution of Homo sapiens to the modern world, blending science, history',
+        rating:'4.3',
     }
 ]

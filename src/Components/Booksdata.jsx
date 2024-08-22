@@ -27,6 +27,7 @@ const Booksdata = ({ title, inputValue }) => {
                             <p className="text-Gray-500 font-light text-sm">{book.author}</p>
                         </div>
                         <p className="font-Poppins text-sm font-light mt-1">{book.description.length >= 40 ? book.description.substring(0, 50) + '...' : book.description}</p>
+                        <p className='font-Poppins text-sm font-medium mt-1 text-orange-500'>Ratings {book.rating}+</p>
                         <Link to={`/books/${book.id}`}><button className='px-2 py-1 bg-Gray text-Azure text-xs mt-1 rounded-lg float-right'>View details</button></Link>
                     </div>
                 ))}
