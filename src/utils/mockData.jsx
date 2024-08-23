@@ -1,6 +1,7 @@
+import { nanoid } from "nanoid"
 export const bookData = [
     {
-        id:1,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook1.jpg',
         title:'A Brief History of Time ',
         author:'Stephen Hawking',
@@ -9,7 +10,7 @@ export const bookData = [
         rating:'4.5',
     },
     {
-        id:2,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook2.jpg',
         title:'The Selfish Gene',
         author:'Richard Dawkins',
@@ -17,7 +18,7 @@ export const bookData = [
         description:'Dawkins introduces the concept of the "selfish gene," explaining how genes drive evolution and behavior. The book is known for its clear explanation of complex biological ideas',
         rating:'4.5',
     },{
-        id:3,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook3.jpg',
         title:'The Elegant Universe',
         author:'Brian Greene',
@@ -25,7 +26,7 @@ export const bookData = [
         description:'This book delves into the world of string theory, a cutting-edge idea in physics that attempts to unify all fundamental forces of the universe. Greene makes complex concepts understandable and fascinating.',
         rating:'4.5',
     },{
-        id:4,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook4.jpg',
         title:'Sapiens',
         author:'Yuval Noah Harari',
@@ -33,7 +34,7 @@ export const bookData = [
         description:'Harari explores the history of humanity, from the evolution of Homo sapiens to the modern world, blending science, history',
         rating:'2.5',
     },{
-        id:5,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook5.jpg',
         title:'The Gene',
         author:'Siddhartha Mukherjee',
@@ -42,7 +43,7 @@ export const bookData = [
         rating:'4.2',
     },
     {
-        id:6,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook1.jpg',
         title:'A Brief History of Time ',
         author:'Stephen Hawking',
@@ -51,7 +52,7 @@ export const bookData = [
         rating:'4.2',
     },
     {
-        id:7,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook2.jpg',
         title:'The Selfish Gene',
         author:'Richard Dawkins',
@@ -59,7 +60,7 @@ export const bookData = [
         description:'Dawkins introduces the concept of the "selfish gene," explaining how genes drive evolution and behavior. The book is known for its clear explanation of complex biological ideas',
         rating:'4.1',
     },{
-        id:8,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook3.jpg',
         title:'The Elegant Universe',
         author:'Brian Greene',
@@ -67,7 +68,7 @@ export const bookData = [
         description:'This book delves into the world of string theory, a cutting-edge idea in physics that attempts to unify all fundamental forces of the universe. Greene makes complex concepts understandable and fascinating.',
         rating:'4.0',
     },{
-        id:9,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook4.jpg',
         title:'Sapiens',
         author:'Yuval Noah Harari',
@@ -75,7 +76,7 @@ export const bookData = [
         description:'Harari explores the history of humanity, from the evolution of Homo sapiens to the modern world, blending science, history',
         rating:'4.8',
     },{
-        id:10,
+        id:nanoid(),
         img:'/assets/ScienceBooks/scienceBook5.jpg',
         title:'The Gene',
         author:'Siddhartha Mukherjee',

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Tabbutton from "./Tabbutton";
 import { bookData } from "../utils/mockData";
 import {Link} from 'react-router-dom'
+import BookCard from "./BookCard";
 
 const Categories = () => {
 
@@ -26,16 +27,7 @@ const Categories = () => {
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-5">
                 {filterdBooks.map((book) => (
-                    <div className="p-2 border-2 border-blue-100 rounded-lg w-64" key={book.id}>
-                        <img src={book.img} alt="book_image" className="w-full h-40 rounded-md" />
-                        <h3 className="font-semibold text-base font-Poppins mt-2">{book.title}</h3>
-                        <div className="flex gap-2 items-center mt-2 font-Poppins">
-                            <p className="bg-blue-50 border-2 border-blue-200 p-1 font-light text-Azure text-xs rounded-md font-Poppins">Author</p>
-                            <p className="text-Gray-500 font-medium text-sm font-Poppins">{book.author}</p>
-                        </div>
-                        <p className="font-Poppins text-sm font-light mt-1">{book.description.length >= 60 ? book.description.substring(0, 50) + '...' : book.description}</p>
-                        <Link to={`/books/${book.id}`}><button className='px-2 py-1 bg-blue-50 text-black font-Poppins border-2 border-blue-200 text-xs mt-1 rounded-lg float-right'>View details</button></Link>
-                    </div>
+                    <BookCard book={book} key={book.id} />
                 ))}
             </div>
         </div>)

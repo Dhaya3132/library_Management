@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addBook } from '../../utils/bookSlice';
+import { nanoid } from 'nanoid';
 
 
 const AddBooks = () => {
@@ -34,6 +35,7 @@ const AddBooks = () => {
     console.log(bookData)
 
     const newBooks = {
+      id:nanoid(),
       title: bookData.title,
       img: bookData.image,
       author: bookData.author,

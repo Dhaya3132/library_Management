@@ -7,7 +7,7 @@ import left_icon from '../../assets/left_icon.svg';
 
 const BookDetail = () => {
   const { id } = useParams();
-  const book_data = bookData.find(book => book.id === parseInt(id));
+  const book_data = bookData.find(book => book.id === id);
   return (
     <section className='p-5'>
       <Link to='/browsebook'>
