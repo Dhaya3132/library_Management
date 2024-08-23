@@ -1,10 +1,8 @@
 import Categories from "../../Components/Categories";
-import Footer from "../../Components/Footer";
 import Booksdata from "../../Components/Booksdata";
 import hero_image from '../../assets/hero_image.jpg';
 const Home = () => {
     return (
-        <>
         <div className="p-10">
             <section id="hero_Section" className="flex md:flex-row flex-col justify-center items-center gap-10 md:p-10 p-5">
                 <div className="w-1/2">
@@ -16,7 +14,5 @@ const Home = () => {
             <Categories />
             <Booksdata />
         </div>
-        <Footer /></>
-
     )}
 export default Home;
