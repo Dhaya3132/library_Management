@@ -5,6 +5,7 @@ import { addBook } from '../../utils/bookSlice';
 
 
 const AddBooks = () => {
+  const [error, setError] = useState('');
   const [bookData, setBookData] = useState({
     title: '',
     author: '',
@@ -24,6 +25,12 @@ const AddBooks = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    const { title, author, image, description } = bookData;
+
+    if(!title || !author || !image || !description){
+      setError('Please ensure all the field are entered');
+      return;
+    }
     console.log(bookData)
 
     const newBooks = {
@@ -58,6 +65,7 @@ const AddBooks = () => {
         <label className='font-medium text-lg text-gray-600 mb-2'>Upload a Image</label>
         <input type="file" name='image' accept='image/*' onChange={handleChange} placeholder='Choose a Image' className='outline-none' />
       </div>
+      {error && <p className='font-medium text-red-500 text-base mb-4'>{error}</p>}
       <button type='submit' className='px-6 py-2 bg-blue-50 border-2 border-blue-100 text-black font-semibold rounded-md'>Add book</button>
     </form>
   )
