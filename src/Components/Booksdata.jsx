@@ -1,9 +1,11 @@
 import React from 'react';
-import { bookData } from '../utils/mockData';
+import {useSelector} from 'react-redux';
 import { Link } from 'react-router-dom';
 import BookCard from './BookCard';
 
 const Booksdata = ({ title, inputValue }) => {
+
+    const bookData = useSelector(state => state.book);
     
     const searchedValue = inputValue ? inputValue.toLowerCase() : '';
 

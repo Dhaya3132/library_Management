@@ -10,6 +10,7 @@ const AddBooks = () => {
   const [bookData, setBookData] = useState({
     title: '',
     author: '',
+    type:'',
     image: null,
     description: '',
   })
@@ -38,9 +39,11 @@ const AddBooks = () => {
       id:nanoid(),
       title: bookData.title,
       img: bookData.image,
+      type:bookData.type,
       author: bookData.author,
       description: bookData.description,
-      img: URL.createObjectURL(bookData.image)
+      img: URL.createObjectURL(bookData.image),
+      isNew:true,
     }
     console.log(newBooks);
 
@@ -58,6 +61,10 @@ const AddBooks = () => {
       <div className='mb-4'>
         <label className='font-medium text-lg text-gray-600 mb-2'>Author</label>
         <input type="text" name='author' value={bookData.author} onChange={handleChange} placeholder='Enter a Author' className='w-full h-12 pl-2 pr-5 border-2 border-blue-100 outline-none rounded-md' />
+      </div>
+      <div className='mb-4'>
+        <label className='font-medium text-lg text-gray-600 mb-2'>Book Type</label>
+        <input type="text" name='type' value={bookData.type} onChange={handleChange} placeholder='Enter a book type eg: fantacy, Non-Fiction, crime, fiction, Science, ' className='w-full h-12 pl-2 pr-5 border-2 border-blue-100 outline-none rounded-md' />
       </div>
       <div className='mb-4'>
         <label className='font-medium text-lg text-gray-600 mb-2'>Description</label>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Tabbutton from "./Tabbutton";
-import { bookData } from "../utils/mockData";
-import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux';
 import BookCard from "./BookCard";
 
 const Categories = () => {
@@ -9,19 +8,21 @@ const Categories = () => {
     const [selectedTab, setSelectedTab] = useState();
     const [filterdBooks, setFilteredBooks] = useState([]);
 
-    const handleEvent = (selectedContent) => { setSelectedTab(selectedContent) }
+    const bookDatas = useSelector(state => state.book);
+
+    const handleEvent = (selectedContent) => { setSelectedTab(selectedContent.toLowerCase()) }
 
     useEffect(() => {
-        const filterdBook = bookData.filter((book) => (book.type === selectedTab)); setFilteredBooks(filterdBook);
+        const filterdBook = bookDatas.filter((book) => (book.type === selectedTab)); setFilteredBooks(filterdBook);
     }, [selectedTab])
 
     return (
         <div className="mt-10 bg-white flex flex-col justify-center items-center">
             <h2 className="font-semibold font-Poppins text-3xl mb-5">Catergories book</h2>
             <div className="flex gap-4 px-6 py-3 border-2 border-blue-300 shadow-md w-fit rounded-full">
-                <Tabbutton onClick={() => handleEvent('Science')} isActive={selectedTab === 'Science'}>Science</Tabbutton>
+                <Tabbutton onClick={() => handleEvent('science')} isActive={selectedTab === 'Science'}>Science</Tabbutton>
                 <Tabbutton onClick={() => handleEvent('fiction')} isActive={selectedTab === 'Fiction'}>Fiction</Tabbutton>
-                <Tabbutton onClick={() => handleEvent('Non-Fiction')} isActive={selectedTab === 'Non-Fiction'}>Non-Fiction</Tabbutton>
+                <Tabbutton onClick={() => handleEvent('non fiction')} isActive={selectedTab === 'Non-Fiction'}>Non-Fiction</Tabbutton>
                 <Tabbutton onClick={() => handleEvent('fantacy')} isActive={selectedTab === 'Fantacy'}>Fantacy</Tabbutton>
                 <Tabbutton onClick={() => handleEvent('crime')} isActive={selectedTab === 'Crime'}>Crime</Tabbutton>
             </div>

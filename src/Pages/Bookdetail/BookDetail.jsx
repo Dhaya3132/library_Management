@@ -1,13 +1,14 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { bookData } from '../../utils/mockData';
 import Booksdata from '../../Components/Booksdata';
+import {useSelector} from 'react-redux';
 import { Link } from 'react-router-dom';
 import left_icon from '../../assets/left_icon.svg';
 
 const BookDetail = () => {
   const { id } = useParams();
-  const book_data = bookData.find(book => book.id === id);
+  const bookDatas = useSelector(state => state.book);
+  const book_data = bookDatas.find(book => book.id === id);
   return (
     <section className='p-5'>
       <Link to='/browsebook'>
