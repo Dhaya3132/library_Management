@@ -22,6 +22,7 @@ const BookDetail = () => {
           <h2 className='font-semibold font-Poppins text-4xl mb-2'>Title : {book_data.title}</h2>
           <p className='font-base font-Poppins text-xl mb-2'>Description : {book_data.description}</p>
           <h4 className='text-lg font-semibold font-Poppins mb-2'><span className='px-2 py-1 bg-blue-50 border-2 border-blue-200 text-black font-medium text-base rounded-md font-Poppins'>Author</span> : {book_data.author}</h4>
+          <p className='font-Poppins text-md font-medium mt-1 text-orange-500'>Ratings {book_data.rating}+</p>
         </div>
       </div>
       <Booksdata title={'See other books'} />

@@ -13,7 +13,7 @@ const Categories = () => {
     const handleEvent = (selectedContent) => { setSelectedTab(selectedContent.toLowerCase()) }
 
     useEffect(() => {
-        const filterdBook = bookDatas.filter((book) => (book.type === selectedTab)); setFilteredBooks(filterdBook);
+        const filterdBook = bookDatas.filter((book) => (book.type.toLowerCase() === selectedTab)); setFilteredBooks(filterdBook);
     }, [selectedTab])
 
     return (
