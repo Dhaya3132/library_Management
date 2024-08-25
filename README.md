@@ -37,6 +37,7 @@ This project is an Online Library Management System built using React.js, Redux,
 - TabButton: Buttons for navigate between different book categories.
 - Store Folder: Contains Redux store and slice logic.
 - Utils Folder: Contains utility functions, including bookSlice and mockData.
+- BookPage: Contains the selectes category books.
 
 ## Technologies Used
 - React.js: JavaScript library for building user interfaces.
