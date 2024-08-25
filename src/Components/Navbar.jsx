@@ -21,7 +21,7 @@ const Navbar = () => {
             <div className="p-2">
                     {
                         isOpen &&
-                        <ul className="md:hidden flex flex-col justify-start gap-5 bg-indigo-500 rounded-sm text-white w-full text-medium font-base cursor-pointer p-3">
+                        <ul className="md:hidden flex flex-col justify-start gap-5 bg-black rounded-sm text-white w-full text-medium font-base cursor-pointer p-3">
                             <Link to='/'><li>Home</li></Link>
                             <Link to='/browsebook'><li>Browse Book</li></Link>
                             <Link to="/addbooks"><li>Add books</li></Link>

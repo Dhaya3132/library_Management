@@ -52,7 +52,7 @@ const AddBooks = () => {
   }
 
   return (
-    <form className='w-1/2 font-Poppins p-12 mx-auto' onSubmit={handleSubmit}>
+    <form className='md:w-1/2 w-full font-Poppins p-12 mx-auto' onSubmit={handleSubmit}>
       <h2 className='font-semibold text-2xl mb-4 text-center'>Add new Book</h2>
       <div className='mb-4'>
         <label className='font-medium text-lg text-gray-600 mb-2'>Title</label>
