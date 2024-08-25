@@ -15,12 +15,12 @@ const Booksdata = ({ title, inputValue }) => {
     ));
     
     return (
-        <div className='p-10'>
-            <div className='flex justify-between'>
-                <h2 className='font-Poppins font-semibold text-3xl'>{title ? title : 'Popular Books'}</h2>
-                {title ? '' : <Link to='/browsebook'><p className='bg-blue-50 text-black rounded-md px-3 py-1 border-2 border-blue-300'>View more</p></Link>}
+        <div className='mt-10 p-5'>
+            <div className='flex justify-between items-center'>
+                <h2 className='font-Poppins font-medium text-3xl'>{title ? title : 'Popular Books'}</h2>
+                {title ? '' : <Link to='/browsebook'><p className='text-black font-normal text-base underline underline-offset-1'>View more</p></Link>}
             </div>
-            <div className="flex flex-wrap justify-center p-5 gap-5 mt-5">
+            <div className="flex flex-wrap justify-center gap-5 mt-8">
                 {filterData.map((book) => (
                     <BookCard book={book} key={book.id} />
                 ))}

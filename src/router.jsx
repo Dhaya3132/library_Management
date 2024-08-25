@@ -5,6 +5,7 @@ import Books from "./Pages/Browsebook/Books";
 import AddBooks from "./Pages/Addbooks/AddBooks";
 import BookDetail from "./Pages/Bookdetail/BookDetail";
 import Error from "./Pages/Error/Error";
+import BookPage from "./Components/BookPage";
 const router = createBrowserRouter([
     {
         path:'/',
@@ -21,8 +22,11 @@ const router = createBrowserRouter([
                 path:'/addbooks',
                 element:<AddBooks />
             },{
-                path:'/books/:id',
+                path:'/book/:id',
                 element:<BookDetail />
+            },{
+                path:'/books/:catergory',
+                element:<BookPage />
             }
         ],
         errorElement:<Error />

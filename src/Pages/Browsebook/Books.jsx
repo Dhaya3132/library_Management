@@ -10,7 +10,7 @@ const Books = () => {
   }
 
   return (
-    <div className='p-10'>
+    <div className='p-5'>
       <section>
         <Categories />
         <Searchfield handleText={handleSearchTxt}/>

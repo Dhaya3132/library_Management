@@ -1,6 +1,7 @@
-const Tabbutton = ({children,onClick,isActive}) => {
+import { Link } from "react-router-dom";
+const Tabbutton = ({ children, to }) => {
     return (
-        <button onClick={onClick} className={`hover:bg-Azure hover:text-white font-medium font-Poppins  ${isActive ? 'bg-Azure text-white' : 'bg-gray-50 text-black'} px-6 py-2 rounded-full`}>{children}</button>
+        <Link to={to}><button className="bg-black text-white hover:bg-indigo-500 font-normal text-base font-Poppins px-6 py-2 rounded-full">{children}</button></Link>
     )
 }
 export default Tabbutton;

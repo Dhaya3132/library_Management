@@ -14,6 +14,9 @@ export default {
         'Azure':'#0866FF',
         'WhiteSmoke':'#f5f5f5',
         'Gray':'#F2F4F7',
+      },
+      backgroundImage:{
+        'bgBanner':"url('/public/bgBanner.svg')",
       }
     },
   },
