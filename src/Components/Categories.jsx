@@ -4,7 +4,7 @@ const Categories = () => {
     return (
         <div className="mt-10 bg-white flex flex-col justify-center items-center">
             <h2 className="font-medium font-Poppins text-3xl mb-5">Catergories book</h2>
-            <div className="flex gap-4 px-6 py-3 w-fit rounded-md">
+            <div className="flex flex-wrap gap-4 px-6 py-3 w-fit rounded-md">
                 <Tabbutton to='/books/science'>Science</Tabbutton>
                 <Tabbutton to='/books/fiction'>Fiction</Tabbutton>
                 <Tabbutton to='/books/non_fiction'>Non-Fiction</Tabbutton>
